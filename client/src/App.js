@@ -1,6 +1,10 @@
 import React, { Component } from "react";
 import logo from "./logo.svg";
 import "./App.css";
+import Login from './components/Login';
+import Logout from './components/Logout';
+import LoginHooks from './components/LoginHooks';
+import LogoutHooks from './components/LogoutHooks';
 
 function App() {
   return (
@@ -11,6 +15,9 @@ function App() {
       </div>
       <p className="App-intro">
         To get started, edit <code>src/App.js</code> and save to reload.
+              <LoginHooks />
+        <LogoutHooks />
+        <br />
       </p>
     </div>
   );
