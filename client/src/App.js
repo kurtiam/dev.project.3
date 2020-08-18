@@ -1,25 +1,38 @@
-import React, { Component } from "react";
-import logo from "./logo.svg";
-import "./App.css";
-import LoginHooks from './components/LoginHooks';
-import LogoutHooks from './components/LogoutHooks';
+import React from 'react';
+import GoogleLogin from './components/GoogleLogin/GoogleLogin';
+import Profile from './components/Profile/Profile';
 
-function App() {
-  return (
-    <div className="App">
-      <div className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h2>Welcome to React</h2>
-      </div>
-      <p className="App-intro">
-        To get started, edit <code>src/App.js</code> and save to reload.
-        <LoginHooks />
-        <LogoutHooks />
-        <br />
-      </p>
-    </div>
-  );
+class App extends React.Component {
+  state = {
+    isLoggedIn: false,
+    userProfile: null,
+  };
+
+  login = (userData) => {
+    this.setState({
+      isLoggedIn: true,
+      userProfile: userData.user,
+    });
+  };
+
+  logout = () => {
+    this.setState({
+      isLoggedIn: false,
+      userProfile: null,
+    });
+  };
+
+  render() {
+    return (
+      <>
+        {this.state.isLoggedIn ? (
+          <Profile user={this.state.userProfile} logout={this.logout} />
+        ) : (
+          <GoogleLogin login={this.login} />
+        )}
+      </>
+    );
+  }
 }
-
 
 export default App;
