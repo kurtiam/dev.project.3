@@ -1,38 +1,25 @@
 import React from 'react';
-import GoogleLogin from './components/GoogleLogin/GoogleLogin';
-import Profile from './components/Profile/Profile';
+import './App.css';
+import {BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Header from "./components/Header";
+import UserAuth from './components/UserAuth';
 
-class App extends React.Component {
-  state = {
-    isLoggedIn: false,
-    userProfile: null,
-  };
+function App() {
+  return (
+    <div className="App">
+    <Router>
+      <Switch>
+        
+        <Route path="/">
+          <Header />
+          <UserAuth/>
+        </Route>
 
-  login = (userData) => {
-    this.setState({
-      isLoggedIn: true,
-      userProfile: userData.user,
-    });
-  };
-
-  logout = () => {
-    this.setState({
-      isLoggedIn: false,
-      userProfile: null,
-    });
-  };
-
-  render() {
-    return (
-      <>
-        {this.state.isLoggedIn ? (
-          <Profile user={this.state.userProfile} logout={this.logout} />
-        ) : (
-          <GoogleLogin login={this.login} />
-        )}
-      </>
-    );
-  }
+        </Switch>
+    </Router>
+      
+    </div>
+  );
 }
 
 export default App;
