@@ -1,7 +1,6 @@
 const express = require('express');
 const router = express.Router();
 
-const { pvData } = require('../../models');
 
 router.post('/', (req, res) => {
   console.log('req.body...', req.body)

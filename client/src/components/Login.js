@@ -28,53 +28,53 @@ class Login extends Component {
     // sends the user to the profile page once logged in
     login(user).then(res => {
       if (res) {
-        this.props.history.push(`/input`);
+        this.props.history.push(`/`);
       }
     })
   }
 
   render() {
     return (
-        <div className="main">
-            <div className="container">
-                <div className="row">
-                <div className="col-md-5 mt-5 mx-auto">
-                    <form noValidate onSubmit={this.onSubmit}>
-                    <br></br>
-                    <h1 className="h3 mb-3 font-weight-normal">Sign in to your account</h1>
-                    <div className="form-group">
-                        <label htmlFor="email">Email address:</label>
-                        <input
-                        type="email"
-                        className="form-control"
-                        name="email"
-                        placeholder="Enter email"
-                        value={this.state.email}
-                        onChange={this.onChange}
-                        />
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="password">Password:</label>
-                        <input
-                        type="password"
-                        className="form-control"
-                        name="password"
-                        placeholder="Password"
-                        value={this.state.password}
-                        onChange={this.onChange}
-                        />
-                    </div>
-                    <button
-                        type="submit"
-                        className="btn btn-lg btn-primary btn-block"
-                    >
-                        Sign in
+      <div className="main">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-5 mt-5 mx-auto">
+              <form noValidate onSubmit={this.onSubmit}>
+                <br></br>
+                <h1 className="h3 mb-3 font-weight-normal">Sign in to your account</h1>
+                <div className="form-group">
+                  <label htmlFor="email">Email address:</label>
+                  <input
+                    type="email"
+                    className="form-control"
+                    name="email"
+                    placeholder="Enter email"
+                    value={this.state.email}
+                    onChange={this.onChange}
+                  />
+                </div>
+                <div className="form-group">
+                  <label htmlFor="password">Password:</label>
+                  <input
+                    type="password"
+                    className="form-control"
+                    name="password"
+                    placeholder="Password"
+                    value={this.state.password}
+                    onChange={this.onChange}
+                  />
+                </div>
+                <button
+                  type="submit"
+                  className="btn btn-lg btn-primary btn-block"
+                >
+                  Sign in
                     </button>
-                    </form>
-                </div>
-                </div>
+              </form>
             </div>
+          </div>
         </div>
+      </div>
     )
   }
 }
