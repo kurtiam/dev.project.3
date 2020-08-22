@@ -9,6 +9,8 @@ class Register extends Component {
       last_name: '',
       email: '',
       password: '',
+      grade: '',
+      subject: '',
       errors: {},
       valid_email: null,
 
@@ -41,7 +43,9 @@ class Register extends Component {
       first_name: this.state.first_name,
       last_name: this.state.last_name,
       email: this.state.email,
-      password: this.state.password
+      password: this.state.password,
+      grade: this.state.grade,
+      subject: this.state.subject
 
     }
     // register user on submit and send to the login page
@@ -102,7 +106,29 @@ class Register extends Component {
                     onChange={this.onChange}
                   />
                 </div>
+                <div className="form-group">
+                  <label htmlFor="password">Grade:</label>
+                  <input
+                    type="text"
+                    className="form-control"
+                    name="grade"
+                    placeholder="middel school"
+                    value={this.state.grade}
+                    onChange={this.onChange}
+                  />
+                </div>
 
+                <div className="form-group">
+                  <label htmlFor="password">Subject:</label>
+                  <input
+                    type="text"
+                    className="form-control"
+                    name="subject"
+                    placeholder="Math"
+                    value={this.state.subject}
+                    onChange={this.onChange}
+                  />
+                </div>
 
                 <button
                   type="submit"

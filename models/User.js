@@ -17,6 +17,12 @@ module.exports = function (sequelize, DataTypes) {
     password: {
       type: DataTypes.STRING
     },
+    grade: {
+      type: DataTypes.STRING
+    },
+    subject: {
+      type: DataTypes.STRING
+    },
     created: {
       type: DataTypes.DATE,
       defaultValue: DataTypes.NOW

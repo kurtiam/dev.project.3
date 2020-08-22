@@ -8,14 +8,7 @@ export const register = newUser => {
       email: newUser.email,
       password: newUser.password,
       grade: newUser.grade,
-      subject: newUser.subject,
-      ip_code: newUser.zip_code,
-      tutor: newUser.tutot,
-      student: newUser.student
-
-
-
-
+      subject: newUser.subject
     })
     .then(response => {
       console.log('Registered');
@@ -37,29 +30,22 @@ export const login = user => {
     });
 }
 
-// export const pvWattsForm = newRequest => {
-//   return axios
-//     .post('/api/pvWatts/data', {
-//       street_address: newRequest.street_address,
-//       city: newRequest.city,
-//       home_state: newRequest.home_state,
-//       zip_code: newRequest.zip_code,
-//       system_capacity: newRequest.system_capacity,
-//       array_type: newRequest.array_type,
-//       email: newRequest.email
-//     })
-  // .then(response => {
-  //   console.log('hit the backend for pvWatts')
-  // })
-  // .catch(err => {
-  //   console.log(err)
-  // })
-// }
-
-////////////////////// csv file /////////////////////////////////
-// export const importDataCsv = csvData => {
-//   return axios.post('/api/uploads', {
-//     csvData: csvData
-//   })
-// }
+export const profileForm = newRequest => {
+  return axios
+    .post('/api/profiles/data', {
+      email: newRequest.email,
+      tutor: newRequest.tutor,
+      student: newRequest.student,
+      grade: newRequest.grade,
+      level: newRequest.level,
+      price: newRequest.price,
+      subject: newRequest.subject
+    })
+    .then(response => {
+      console.log('hit the backend for pvWatts')
+    })
+    .catch(err => {
+      console.log(err)
+    })
+}
 

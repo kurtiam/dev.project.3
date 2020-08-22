@@ -29,11 +29,11 @@ class Landing extends Component {
     // sends user to the profile page once clicked
     const userLink = (
       <ul className="navbar-nav">
-        <li className="nav-item">
+        {/* <li className="nav-item">
           <Link to="/input" className="nav-link">
             Info
           </Link>
-        </li>
+        </li> */}
         {/* <li className="nav-item">
           <Link to="/dashboard" className="nav-link">
             Your Charts

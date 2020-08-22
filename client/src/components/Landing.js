@@ -12,16 +12,15 @@ class Landing extends Component {
                                 <br></br>
                                 <h4 className="text-center">Please log in or register to get a Match!</h4>
                                 <br></br>
-                                <p className="text-center"> TutorNet is...
-                        <br></br>
-                                    <br></br>
-                                    <br></br>
+                                <p className="text-center"> TutorNet is...</p>
+
                         Find a tutor in 3 easy steps:
                         <br></br>
-                                    <br></br>
-                        1. Login or register<br></br>
-                        2. Enter your info<br></br>
-                        3. Review yor Matches</p>
+                                <ul>
+                                    <li>Login or register</li>
+                                    <li>Enter your info</li>
+                                    <li>Review yor Matches</li>
+                                </ul>
                             </div>
                         </div>
                     </div>

@@ -11,10 +11,10 @@ module.exports = function (sequelize, DataTypes) {
       type: DataTypes.STRING
     },
     tutor: {
-      type: DataTypes.BOOLEAN
+      type: DataTypes.STRING
     },
     student: {
-      type: DataTypes.BOOLEAN
+      type: DataTypes.STRING
     },
     grade: {
       type: DataTypes.STRING
