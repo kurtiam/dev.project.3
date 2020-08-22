@@ -16,7 +16,16 @@ module.exports = {
         "dialect": "mysql"
     },
     "production": {
-        "use_env_variable": "JAWSDB_URL",
+        //     "use_env_variable": "JAWSDB_URL",
+        //     "dialect": "mysql"
+
+        "username": "kehuneyxscvi5ziz",
+        "password": "lu73w1lkz4lkf20g",
+        "database": "we229i36ekozs5d1",
+        "host": "JAWSDB_URL",
+        "port": "3306",
         "dialect": "mysql"
-    }
+    },
+
 };
+
