@@ -4,7 +4,7 @@ module.exports = {
     "development": {
         "username": "root",
         "password": "password",
-        "database": "kurtdb",
+        "database": "userdb",
         "host": "localhost",
         "port": "3306",
         "dialect": "mysql"
