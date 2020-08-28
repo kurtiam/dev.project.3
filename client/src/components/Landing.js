@@ -14,7 +14,7 @@ class Landing extends Component {
                                 <br></br>
                                 <p className="text-center"> TutorNet is...</p>
 
-                        Find a tutor in 3 easy steps:
+                                Find a tutor in 3 easy steps:
                         <br></br>
                                 <ul>
                                     <li>Login or register</li>
