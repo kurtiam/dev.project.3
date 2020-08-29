@@ -14,7 +14,6 @@ export const registerS = newUser => {
     })
 }
 
-
 export const registerT = newUser => {
   return axios
     .post('/api/users/tutor', {
@@ -57,7 +56,7 @@ export const profileForm = newRequest => {
       subject: newRequest.subject
     })
     .then(response => {
-      console.log('hit the backend for pvWatts')
+      console.log('hit the backend')
     })
     .catch(err => {
       console.log(err)

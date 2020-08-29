@@ -9,14 +9,21 @@ class Register extends Component {
       <div className="container">
 
         <div className="col-md-6 mt-5 mx-auto">
-          <form action="/tutor" class="inline">
-            <button type="submit" className="btn btn-lg btn-primary btn-block" > I want to teach  </button>
+
+          {/* <button onclick="location.href='/tutor'" className="btn btn-lg btn-primary btn-block" > I want to teach  </button> */}
+
+          {/* <button onclick="window.location.href='/tutor'">Continue</button> */}
+
+          <form method="get" action="/tutor">
+            <button type="submit" className="btn btn-lg btn-primary btn-block">I want to teach </button>
           </form>
+
+
         </div>
 
 
         <div className="col-md-6 mt-5 mx-auto">
-          <form action="/student" class="inline">
+          <form action="/student" className="inline">
             <button type="submit" className="btn btn-lg btn-primary btn-block" > I want to learn  </button>
           </form>
         </div>
