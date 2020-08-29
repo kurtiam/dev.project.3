@@ -6,9 +6,7 @@ class Register extends Component {
   render() {
     return (
 
-
       <div className="container">
-
 
         <div className="col-md-6 mt-5 mx-auto">
           <form action="/tutor" class="inline">
@@ -26,11 +24,8 @@ class Register extends Component {
 
       </div>
 
-
     )
   }
-
-
 
 }
 

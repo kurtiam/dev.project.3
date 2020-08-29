@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { register } from './UserFunctions';
+import { registerT } from './UserFunctions';
 
 
 class Tutor extends Component {
@@ -50,7 +50,7 @@ class Tutor extends Component {
 
         }
         // register user on submit and send to the login page
-        register(newUser).then(res => {
+        registerT(newUser).then(res => {
             this.props.history.push(`/login`)
         })
     }
@@ -133,13 +133,10 @@ class Tutor extends Component {
                                     />
                                 </div>
 
-                                <button
-                                    type="submit"
-                                    className="btn btn-lg btn-primary btn-block"
-                                    disabled={!this.state.valid_email}
-                                >
+                                <button type="submit" className="btn btn-lg btn-primary btn-block"
+                                    disabled={!this.state.valid_email || !this.state.password || !this.state.subject || !this.state.first_name} >
                                     Register
-                    </button>
+                               </button>
                             </form>
                         </div>
                     </div>
